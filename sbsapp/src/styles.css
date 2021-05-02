@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: rgb(116, 26, 26);
+    --secondary-color: gray;
+    --error-border-color: red;
+    --error-color: rgb(245, 156, 156);
+}
+
+body, html , app-root {
+    height: 100%;
+}
+
+body, app-root{
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    flex: none;
+}

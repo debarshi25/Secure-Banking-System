@@ -1,0 +1,146 @@
+<div class="container-fluid">
+    <div class="row title-row">
+        <div class="jumbotron title-jumbo container-fluid">
+            <h2>Pending Requests</h2>
+        </div>
+    </div>
+    <div class="row button-row">
+        <div class="col-md d-flex">
+            <a class="btn btn-primary btn-md" routerLinkActive="active" routerLink="/tier1/dashboard" role="button">
+                <i class="fa fa-arrow-left"></i> Back
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="jumbotron requests-jumbo container-fluid">
+            <h3>Customer Transaction Requests</h3>
+            <br>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Account</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Cancel</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="jumbotron requests-jumbo container-fluid">
+            <h3>Customer Appointment Requests</h3>
+            <br>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time Slot</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Cancel</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="jumbotron requests-jumbo container-fluid">
+            <h3>Initiated Requests</h3>
+            <br>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Initiated For</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Cancel</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<button type="button" class="btn btn-danger deleteButton" data-toggle="modal" data-target="#cancelRequestModal">
+    <i class="fa fa-trash-o"></i>
+</button>
+<button type="button" class="btn btn-success deleteButton" data-toggle="modal" data-target="#acceptRequestModal">
+    <i class="fa fa-check"></i>
+</button>
+<button type="button" class="btn btn-danger deleteButton" data-toggle="modal" data-target="#declineRequestModal">
+    <i class="fa fa-times"></i>
+</button>
+
+
+<!--Cancel Request Modal-->
+<div class="modal fade" id="cancelRequestModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cancelRequestModalTitle">Delete Request</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Are you sure you want to permanently delete this request?</h6>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger">Delete Request</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="acceptRequestModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="acceptRequestModalTitle">Authorize Request</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Are you sure you want to authorize this request?</h6>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Authorize Request</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="declineRequestModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="declineRequestModalTitle">Decline Request</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Are you sure you want to decline this request?</h6>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger">Decline Request</button>
+            </div>
+        </div>
+    </div>
+</div>

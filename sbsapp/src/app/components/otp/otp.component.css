@@ -1,0 +1,40 @@
+.container-fluid {
+    justify-content: center;
+    height: 100%;
+}
+
+.row {
+    justify-content: center;
+}
+
+.jumbotron {
+    margin-top: 15%;
+    margin-bottom: 15%;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.form-group {
+    background-color: var(--primary-color);
+    justify-content: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-group button {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    background-color: black;
+    border-color: black;
+}

@@ -1,0 +1,1301 @@
+2021-04-01 10:36:00.584  INFO 23222 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v2.4.3)[0;39m
+
+
+2021-04-01 10:36:00.709  INFO 23222 --- [main] e.asu.cse545.group5.SBS.SbsApplication   : Starting SbsApplication using Java 1.8.0_275 on ACP with PID 23222 (/Users/acpathak/Documents/ACPDocuments/College/ASU/Grad_School/Spring_2021/CSE_545/CSE-545-Project-SBS/target/classes started by acpathak in /Users/acpathak/Documents/ACPDocuments/College/ASU/Grad_School/Spring_2021/CSE_545/CSE-545-Project-SBS)
+2021-04-01 10:36:00.710  INFO 23222 --- [main] e.asu.cse545.group5.SBS.SbsApplication   : No active profile set, falling back to default profiles: default
+2021-04-01 10:36:02.133  INFO 23222 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-01 10:36:02.293  INFO 23222 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 8 JPA repository interfaces.
+2021-04-01 10:36:03.517  INFO 23222 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 10:36:03.550  INFO 23222 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 10:36:03.551  INFO 23222 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-01 10:36:03.675  INFO 23222 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 10:36:03.675  INFO 23222 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2885 ms
+2021-04-01 10:36:04.177  INFO 23222 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-01 10:36:04.315  INFO 23222 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-01 10:36:04.677  INFO 23222 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-01 10:36:04.850  INFO 23222 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-01 10:36:05.451  INFO 23222 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-01 10:36:05.489  INFO 23222 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-01 10:36:06.193  WARN 23222 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): edu.asu.cse545.group5.SBS.model.AppointmentKey
+2021-04-01 10:36:06.194  WARN 23222 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): edu.asu.cse545.group5.SBS.model.AppointmentKey
+2021-04-01 10:36:07.153  INFO 23222 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-01 10:36:07.165  INFO 23222 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-01 10:36:07.927  WARN 23222 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-01 10:36:08.529 DEBUG 23222 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/authenticate']
+2021-04-01 10:36:08.530 DEBUG 23222 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [authenticated] for any request
+2021-04-01 10:36:08.544  INFO 23222 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f1fbc9f, org.springframework.security.web.context.SecurityContextPersistenceFilter@3220c28, org.springframework.security.web.header.HeaderWriterFilter@24018c8b, org.springframework.web.filter.CorsFilter@10d4b573, org.springframework.security.web.authentication.logout.LogoutFilter@25e6c22a, edu.asu.cse545.group5.SBS.filter.JWTRequestFilter@502c2278, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40c28b0d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67e11bda, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50785f86, org.springframework.security.web.session.SessionManagementFilter@430d3021, org.springframework.security.web.access.ExceptionTranslationFilter@40863800, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@713e7d9a]
+2021-04-01 10:36:08.710  INFO 23222 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-01 10:36:09.095  INFO 23222 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-01 10:36:09.105  INFO 23222 --- [main] e.asu.cse545.group5.SBS.SbsApplication   : Started SbsApplication in 9.24 seconds (JVM running for 9.98)
+2021-04-01 10:38:43.101  INFO 23222 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-01 10:38:43.104  INFO 23222 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-01 10:38:43.122  INFO 23222 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2021-04-01 10:38:43.181 DEBUG 23222 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 10:38:43.210 DEBUG 23222 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 10:38:43.288 DEBUG 23222 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 10:38:43.309 DEBUG 23222 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 10:38:43.325 DEBUG 23222 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 10:38:43.328 DEBUG 23222 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 10:38:43.343 DEBUG 23222 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 10:38:43.344 DEBUG 23222 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 10:38:43.345 DEBUG 23222 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 10:38:43.349 DEBUG 23222 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 10:38:43.550 DEBUG 23222 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 10:59:07.830 DEBUG 23222 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 10:59:07.835 DEBUG 23222 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 10:59:07.843 DEBUG 23222 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 10:59:07.854 DEBUG 23222 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 10:59:07.857 DEBUG 23222 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 10:59:07.858 DEBUG 23222 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 10:59:07.864 DEBUG 23222 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 10:59:07.865 DEBUG 23222 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 10:59:07.865 DEBUG 23222 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 10:59:07.865 DEBUG 23222 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 10:59:07.943 DEBUG 23222 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 10:59:28.586 DEBUG 23222 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /authenticate
+2021-04-01 10:59:28.587 DEBUG 23222 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 10:59:28.590 DEBUG 23222 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 10:59:28.594 DEBUG 23222 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 10:59:28.594 DEBUG 23222 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 10:59:28.596 DEBUG 23222 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 10:59:28.597 DEBUG 23222 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 10:59:28.598 DEBUG 23222 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 10:59:29.005 DEBUG 23222 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 10:59:29.462 DEBUG 23222 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 10:59:30.925 DEBUG 23222 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /employee/getAll
+2021-04-01 10:59:30.925 DEBUG 23222 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 10:59:30.927 DEBUG 23222 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 10:59:30.934 DEBUG 23222 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 10:59:30.935 DEBUG 23222 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 10:59:31.039 DEBUG 23222 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 10:59:31.049 ERROR 23222 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 1
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:235) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractAllClaims(JwtUtil.java:38) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractClaim(JwtUtil.java:33) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractUsernameFromToken(JwtUtil.java:21) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.filter.JWTRequestFilter.doFilterInternal(JWTRequestFilter.java:41) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_275]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_275]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_275]
+
+2021-04-01 10:59:31.054 DEBUG 23222 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 10:59:31.054 DEBUG 23222 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 10:59:31.054 DEBUG 23222 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 10:59:31.055 DEBUG 23222 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /error] with attributes [authenticated]
+2021-04-01 10:59:31.055 DEBUG 23222 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 10:59:31.056 DEBUG 23222 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:00:54.078  INFO 23222 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-01 11:00:54.082  INFO 23222 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-01 11:00:54.086  INFO 23222 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-01 11:00:54.099  INFO 23222 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-01 11:00:55.921  INFO 23683 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v2.4.3)[0;39m
+
+
+2021-04-01 11:00:56.003  INFO 23683 --- [main] e.asu.cse545.group5.SBS.SbsApplication   : Starting SbsApplication using Java 1.8.0_275 on ACP with PID 23683 (/Users/acpathak/Documents/ACPDocuments/College/ASU/Grad_School/Spring_2021/CSE_545/CSE-545-Project-SBS/target/classes started by acpathak in /Users/acpathak/Documents/ACPDocuments/College/ASU/Grad_School/Spring_2021/CSE_545/CSE-545-Project-SBS)
+2021-04-01 11:00:56.005  INFO 23683 --- [main] e.asu.cse545.group5.SBS.SbsApplication   : No active profile set, falling back to default profiles: default
+2021-04-01 11:00:56.661  INFO 23683 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-01 11:00:56.750  INFO 23683 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 8 JPA repository interfaces.
+2021-04-01 11:00:57.333  INFO 23683 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 11:00:57.349  INFO 23683 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 11:00:57.350  INFO 23683 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-01 11:00:57.427  INFO 23683 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 11:00:57.428  INFO 23683 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1361 ms
+2021-04-01 11:00:57.657  INFO 23683 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-01 11:00:57.716  INFO 23683 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-01 11:00:57.930  INFO 23683 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-01 11:00:58.033  INFO 23683 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-01 11:00:58.360  INFO 23683 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-01 11:00:58.377  INFO 23683 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-01 11:00:58.719  WARN 23683 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): edu.asu.cse545.group5.SBS.model.AppointmentKey
+2021-04-01 11:00:58.720  WARN 23683 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): edu.asu.cse545.group5.SBS.model.AppointmentKey
+2021-04-01 11:00:59.270  INFO 23683 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-01 11:00:59.280  INFO 23683 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-01 11:00:59.919  WARN 23683 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-01 11:01:00.401 DEBUG 23683 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/authenticate']
+2021-04-01 11:01:00.402 DEBUG 23683 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [authenticated] for any request
+2021-04-01 11:01:00.413  INFO 23683 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71d99732, org.springframework.security.web.context.SecurityContextPersistenceFilter@3cead673, org.springframework.security.web.header.HeaderWriterFilter@40c28b0d, org.springframework.web.filter.CorsFilter@2328ec73, org.springframework.security.web.authentication.logout.LogoutFilter@52d63b7e, edu.asu.cse545.group5.SBS.filter.JWTRequestFilter@592a1882, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10a0a1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36665c11, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42a05533, org.springframework.security.web.session.SessionManagementFilter@341ccfd1, org.springframework.security.web.access.ExceptionTranslationFilter@3220c28, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e258d3b]
+2021-04-01 11:01:00.543  INFO 23683 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-01 11:01:00.983  INFO 23683 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-01 11:01:00.997  INFO 23683 --- [main] e.asu.cse545.group5.SBS.SbsApplication   : Started SbsApplication in 5.704 seconds (JVM running for 6.15)
+2021-04-01 11:01:07.321  INFO 23683 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-01 11:01:07.321  INFO 23683 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-01 11:01:07.323  INFO 23683 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-04-01 11:01:07.333 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 11:01:07.338 DEBUG 23683 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:01:07.359 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:01:07.365 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 11:01:07.366 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 11:01:07.642 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 11:01:07.966 DEBUG 23683 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:01:09.660 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:01:09.660 DEBUG 23683 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:01:09.671 DEBUG 23683 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:01:09.677 ERROR 23683 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 1
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:235) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractAllClaims(JwtUtil.java:38) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractClaim(JwtUtil.java:33) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractUsernameFromToken(JwtUtil.java:21) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.filter.JWTRequestFilter.doFilterInternal(JWTRequestFilter.java:41) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_275]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_275]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_275]
+
+2021-04-01 11:01:09.683 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:01:09.684 DEBUG 23683 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:01:09.684 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:01:09.685 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /error] with attributes [authenticated]
+2021-04-01 11:01:09.691 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:01:09.692 DEBUG 23683 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:02:08.584 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:02:08.587 DEBUG 23683 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:02:08.592 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:02:08.597 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:02:08.599 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:02:08.599 DEBUG 23683 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:02:08.600 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:02:08.600 DEBUG 23683 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:02:08.600 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:02:08.602 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:02:08.689 DEBUG 23683 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:02:08.703 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:02:08.704 DEBUG 23683 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:02:08.705 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:02:08.706 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:02:08.707 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:02:08.712 DEBUG 23683 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:02:08.713 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:02:08.713 DEBUG 23683 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:02:08.713 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:02:08.713 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:02:08.717 DEBUG 23683 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:06:37.171 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 11:06:37.176 DEBUG 23683 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:06:37.184 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:06:37.191 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 11:06:37.192 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 11:06:37.345 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 11:06:37.369 DEBUG 23683 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:07:02.225 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:07:02.226 DEBUG 23683 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:07:02.431 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:07:02.432 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /employee/getAll
+2021-04-01 11:07:03.045 DEBUG 23683 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:10:36.215 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:10:36.228 DEBUG 23683 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:10:36.239 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:10:36.248 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:10:36.251 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:10:36.253 DEBUG 23683 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:10:36.255 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:10:36.255 DEBUG 23683 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:10:36.256 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:10:36.257 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:10:36.311 DEBUG 23683 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:11:19.553 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 11:11:19.554 DEBUG 23683 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:11:19.555 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:11:19.556 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 11:11:19.557 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 11:11:19.678 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 11:11:19.689 DEBUG 23683 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:12:11.479 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:12:11.480 DEBUG 23683 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:12:11.482 DEBUG 23683 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:12:11.493 ERROR 23683 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 1
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:235) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractAllClaims(JwtUtil.java:38) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractClaim(JwtUtil.java:33) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractUsernameFromToken(JwtUtil.java:21) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.filter.JWTRequestFilter.doFilterInternal(JWTRequestFilter.java:41) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_275]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_275]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_275]
+
+2021-04-01 11:12:11.496 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:12:11.497 DEBUG 23683 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:12:11.497 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:12:11.498 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /error] with attributes [authenticated]
+2021-04-01 11:12:11.498 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:12:11.498 DEBUG 23683 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:18:30.686 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:18:30.690 DEBUG 23683 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:18:30.698 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:18:30.714 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:18:30.715 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:18:30.721 DEBUG 23683 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:18:30.722 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:18:30.722 DEBUG 23683 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:18:30.723 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:18:30.723 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:18:30.763 DEBUG 23683 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:18:46.745 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 11:18:46.745 DEBUG 23683 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:18:46.746 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:18:46.747 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 11:18:46.748 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 11:18:46.890 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 11:18:46.902 DEBUG 23683 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:18:49.292 DEBUG 23683 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:18:49.292 DEBUG 23683 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:18:49.294 DEBUG 23683 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:18:49.301 ERROR 23683 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 1
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:235) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractAllClaims(JwtUtil.java:38) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractClaim(JwtUtil.java:33) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractUsernameFromToken(JwtUtil.java:21) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.filter.JWTRequestFilter.doFilterInternal(JWTRequestFilter.java:41) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_275]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_275]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_275]
+
+2021-04-01 11:18:49.311 DEBUG 23683 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:18:49.312 DEBUG 23683 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:18:49.312 DEBUG 23683 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:18:49.313 DEBUG 23683 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /error] with attributes [authenticated]
+2021-04-01 11:18:49.314 DEBUG 23683 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:18:49.314 DEBUG 23683 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:20:28.163 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:20:28.169 DEBUG 23683 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:20:28.178 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:20:28.192 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:20:28.195 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:20:28.196 DEBUG 23683 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:20:28.198 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:20:28.199 DEBUG 23683 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:20:28.200 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:20:28.200 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:20:28.231 DEBUG 23683 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:20:42.997 DEBUG 23683 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 11:20:42.999 DEBUG 23683 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:20:43.000 DEBUG 23683 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:20:43.000 DEBUG 23683 --- [http-nio-8080-exec-10] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 11:20:43.001 DEBUG 23683 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 11:20:43.144 DEBUG 23683 --- [http-nio-8080-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 11:20:43.170 DEBUG 23683 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:20:48.402 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:20:48.403 DEBUG 23683 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:20:48.410 DEBUG 23683 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:20:48.418 ERROR 23683 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 1
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:235) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractAllClaims(JwtUtil.java:38) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractClaim(JwtUtil.java:33) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractUsernameFromToken(JwtUtil.java:21) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.filter.JWTRequestFilter.doFilterInternal(JWTRequestFilter.java:41) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_275]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_275]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_275]
+
+2021-04-01 11:20:48.435 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:20:48.436 DEBUG 23683 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:20:48.436 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:20:48.437 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /error] with attributes [authenticated]
+2021-04-01 11:20:48.437 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:20:48.437 DEBUG 23683 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:23:21.151 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:23:21.166 DEBUG 23683 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:23:21.180 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:23:21.188 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:23:21.192 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:23:21.193 DEBUG 23683 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:23:21.196 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:23:21.200 DEBUG 23683 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:23:21.201 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:23:21.201 DEBUG 23683 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:23:21.234 DEBUG 23683 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:24:33.539 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:24:33.541 DEBUG 23683 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:24:33.542 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:24:33.543 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:24:33.543 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:24:33.543 DEBUG 23683 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:24:33.544 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:24:33.544 DEBUG 23683 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:24:33.547 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:24:33.548 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:24:33.552 DEBUG 23683 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:24:56.575 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:24:56.577 DEBUG 23683 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:24:56.578 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:24:56.580 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:24:56.580 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:24:56.581 DEBUG 23683 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:24:56.582 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:24:56.583 DEBUG 23683 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:24:56.583 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:24:56.583 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:24:56.598 DEBUG 23683 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:27:14.384 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:27:14.387 DEBUG 23683 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:27:14.389 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:27:14.390 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:27:14.390 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:27:14.391 DEBUG 23683 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:27:14.391 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:27:14.391 DEBUG 23683 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:27:14.394 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:27:14.395 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:27:14.400 DEBUG 23683 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:27:30.620 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 11:27:30.621 DEBUG 23683 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:27:30.622 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:27:30.623 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 11:27:30.624 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 11:27:30.747 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 11:27:30.756 DEBUG 23683 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:28:51.797 DEBUG 23683 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /employee/getAll
+2021-04-01 11:28:51.798 DEBUG 23683 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:28:51.806 DEBUG 23683 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:28:51.816 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:28:51.816 DEBUG 23683 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:28:51.819 DEBUG 23683 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:28:51.824 ERROR 23683 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 1
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:235) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractAllClaims(JwtUtil.java:38) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractClaim(JwtUtil.java:33) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.util.JwtUtil.extractUsernameFromToken(JwtUtil.java:21) ~[classes/:na]
+	at edu.asu.cse545.group5.SBS.filter.JWTRequestFilter.doFilterInternal(JWTRequestFilter.java:41) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.5.jar:5.4.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_275]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_275]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_275]
+
+2021-04-01 11:28:51.837 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:28:51.838 DEBUG 23683 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:28:51.839 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:28:51.839 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /error] with attributes [authenticated]
+2021-04-01 11:28:51.840 DEBUG 23683 --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:28:51.840 DEBUG 23683 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:33:09.814 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:33:09.829 DEBUG 23683 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:33:09.842 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:33:09.862 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:33:09.865 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:33:09.867 DEBUG 23683 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:33:09.875 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:33:09.875 DEBUG 23683 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:33:09.879 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:33:09.879 DEBUG 23683 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:33:09.914 DEBUG 23683 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:33:16.775 DEBUG 23683 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /authenticate
+2021-04-01 11:33:16.776 DEBUG 23683 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:33:16.778 DEBUG 23683 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:33:16.782 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 11:33:16.782 DEBUG 23683 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:33:16.786 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:33:16.786 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 11:33:16.786 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 11:33:16.948 DEBUG 23683 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 11:33:16.961 DEBUG 23683 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:33:56.980 DEBUG 23683 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:33:56.982 DEBUG 23683 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:33:56.983 DEBUG 23683 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:33:56.984 DEBUG 23683 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:33:56.989 DEBUG 23683 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:33:56.990 DEBUG 23683 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:33:56.991 DEBUG 23683 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:33:56.995 DEBUG 23683 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:33:56.998 DEBUG 23683 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:33:56.998 DEBUG 23683 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:33:57.004 DEBUG 23683 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:33:57.076 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:33:57.077 DEBUG 23683 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:33:57.078 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:33:57.078 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:33:57.079 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:33:57.079 DEBUG 23683 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:33:57.080 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:33:57.080 DEBUG 23683 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:33:57.080 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:33:57.080 DEBUG 23683 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:33:57.086 DEBUG 23683 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:34:08.542 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:34:08.542 DEBUG 23683 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:34:08.543 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:34:08.545 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:34:08.546 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:34:08.546 DEBUG 23683 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:34:08.547 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:34:08.547 DEBUG 23683 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:34:08.548 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:34:08.548 DEBUG 23683 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:34:08.551 DEBUG 23683 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:37:54.885  INFO 24414 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v2.4.3)[0;39m
+
+
+2021-04-01 11:37:54.989  INFO 24414 --- [main] e.asu.cse545.group5.SBS.SbsApplication   : Starting SbsApplication using Java 1.8.0_275 on ACP with PID 24414 (/Users/acpathak/Documents/ACPDocuments/College/ASU/Grad_School/Spring_2021/CSE_545/CSE-545-Project-SBS/target/classes started by acpathak in /Users/acpathak/Documents/ACPDocuments/College/ASU/Grad_School/Spring_2021/CSE_545/CSE-545-Project-SBS)
+2021-04-01 11:37:54.990  INFO 24414 --- [main] e.asu.cse545.group5.SBS.SbsApplication   : No active profile set, falling back to default profiles: default
+2021-04-01 11:37:55.773  INFO 24414 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-01 11:37:55.902  INFO 24414 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 8 JPA repository interfaces.
+2021-04-01 11:37:56.821  INFO 24414 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 11:37:56.842  INFO 24414 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 11:37:56.843  INFO 24414 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-01 11:37:56.924  INFO 24414 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 11:37:56.925  INFO 24414 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1875 ms
+2021-04-01 11:37:57.377  INFO 24414 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-01 11:37:57.503  INFO 24414 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-01 11:37:57.842  INFO 24414 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-01 11:37:57.992  INFO 24414 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-01 11:37:58.585  INFO 24414 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-01 11:37:58.612  INFO 24414 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-01 11:37:59.392  WARN 24414 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): edu.asu.cse545.group5.SBS.model.AppointmentKey
+2021-04-01 11:37:59.394  WARN 24414 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): edu.asu.cse545.group5.SBS.model.AppointmentKey
+2021-04-01 11:38:01.424  INFO 24414 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-01 11:38:01.442  INFO 24414 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-01 11:38:02.461  WARN 24414 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-01 11:38:03.155 DEBUG 24414 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/authenticate']
+2021-04-01 11:38:03.156 DEBUG 24414 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [authenticated] for any request
+2021-04-01 11:38:03.170  INFO 24414 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42a05533, org.springframework.security.web.context.SecurityContextPersistenceFilter@10a0a1e, org.springframework.security.web.header.HeaderWriterFilter@1fa98a22, org.springframework.web.filter.CorsFilter@17053b5, org.springframework.security.web.authentication.logout.LogoutFilter@1827fc4e, edu.asu.cse545.group5.SBS.filter.JWTRequestFilter@30c01c37, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4345fd45, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a709cc7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cad24ae, org.springframework.security.web.session.SessionManagementFilter@3cead673, org.springframework.security.web.access.ExceptionTranslationFilter@40c28b0d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@39f93225]
+2021-04-01 11:38:03.367  INFO 24414 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-01 11:38:03.825  INFO 24414 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-01 11:38:03.837  INFO 24414 --- [main] e.asu.cse545.group5.SBS.SbsApplication   : Started SbsApplication in 9.477 seconds (JVM running for 10.083)
+2021-04-01 11:38:25.186  INFO 24414 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-01 11:38:25.187  INFO 24414 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-01 11:38:25.192  INFO 24414 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-04-01 11:38:25.224 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:38:25.237 DEBUG 24414 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:38:25.300 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:38:25.372 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:38:25.383 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:38:25.387 DEBUG 24414 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:38:25.395 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:38:25.396 DEBUG 24414 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:38:25.396 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:38:25.397 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:38:25.665 DEBUG 24414 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:38:33.724 DEBUG 24414 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 11:38:33.725 DEBUG 24414 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:38:33.728 DEBUG 24414 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:38:33.731 DEBUG 24414 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 11:38:33.732 DEBUG 24414 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 11:38:34.266 DEBUG 24414 --- [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 11:38:35.070 DEBUG 24414 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:40:46.670 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:40:46.673 DEBUG 24414 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:40:46.675 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:40:46.676 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:40:46.677 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:40:46.677 DEBUG 24414 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:40:46.678 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:40:46.680 DEBUG 24414 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:40:46.680 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:40:46.680 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:40:46.687 DEBUG 24414 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:40:46.746 DEBUG 24414 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:40:46.746 DEBUG 24414 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:40:46.748 DEBUG 24414 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:40:46.748 DEBUG 24414 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:40:46.749 DEBUG 24414 --- [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:40:46.749 DEBUG 24414 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:40:46.749 DEBUG 24414 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:40:46.749 DEBUG 24414 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:40:46.750 DEBUG 24414 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:40:46.750 DEBUG 24414 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:40:46.757 DEBUG 24414 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:40:53.717 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:40:53.718 DEBUG 24414 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:40:53.720 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:40:53.721 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:40:53.722 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:40:53.722 DEBUG 24414 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:40:53.724 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:40:53.724 DEBUG 24414 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:40:53.724 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:40:53.725 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:40:53.730 DEBUG 24414 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:40:53.791 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:40:53.792 DEBUG 24414 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:40:53.793 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:40:53.794 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:40:53.794 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:40:53.795 DEBUG 24414 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:40:53.795 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:40:53.796 DEBUG 24414 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:40:53.796 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:40:53.796 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:40:53.802 DEBUG 24414 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:41:04.184 DEBUG 24414 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:41:04.184 DEBUG 24414 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:41:04.185 DEBUG 24414 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:41:04.186 DEBUG 24414 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:41:04.187 DEBUG 24414 --- [http-nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:41:04.187 DEBUG 24414 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:41:04.188 DEBUG 24414 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:41:04.188 DEBUG 24414 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:41:04.191 DEBUG 24414 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:41:04.191 DEBUG 24414 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:41:04.195 DEBUG 24414 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:52:52.944 DEBUG 24414 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:52:52.954 DEBUG 24414 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:52:52.962 DEBUG 24414 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:52:52.971 DEBUG 24414 --- [http-nio-8080-exec-10] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:52:52.973 DEBUG 24414 --- [http-nio-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:52:52.975 DEBUG 24414 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:52:52.976 DEBUG 24414 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:52:52.976 DEBUG 24414 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:52:52.976 DEBUG 24414 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:52:52.977 DEBUG 24414 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:52:53.007 DEBUG 24414 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:52:53.016 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:52:53.016 DEBUG 24414 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:52:53.019 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:52:53.019 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:52:53.020 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:52:53.020 DEBUG 24414 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:52:53.021 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:52:53.022 DEBUG 24414 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:52:53.022 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:52:53.022 DEBUG 24414 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:52:53.028 DEBUG 24414 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:53:05.404 DEBUG 24414 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:53:05.405 DEBUG 24414 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:53:05.408 DEBUG 24414 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:53:05.410 DEBUG 24414 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:53:05.410 DEBUG 24414 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:53:05.411 DEBUG 24414 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:53:05.411 DEBUG 24414 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:53:05.412 DEBUG 24414 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:53:05.412 DEBUG 24414 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:53:05.413 DEBUG 24414 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:53:05.416 DEBUG 24414 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:53:05.501 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:53:05.501 DEBUG 24414 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:53:05.502 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:53:05.503 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:53:05.504 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:53:05.504 DEBUG 24414 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:53:05.505 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:53:05.506 DEBUG 24414 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:53:05.507 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:53:05.507 DEBUG 24414 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:53:05.511 DEBUG 24414 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:57:49.257 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:57:49.283 DEBUG 24414 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:57:49.290 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:57:49.295 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:57:49.297 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:57:49.298 DEBUG 24414 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:57:49.300 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:57:49.300 DEBUG 24414 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:57:49.300 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:57:49.300 DEBUG 24414 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:57:49.335 DEBUG 24414 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:58:12.498 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:58:12.499 DEBUG 24414 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:58:12.500 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:58:12.502 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:58:12.503 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 11:58:12.503 DEBUG 24414 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:58:12.504 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 11:58:12.504 DEBUG 24414 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:58:12.504 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:58:12.505 DEBUG 24414 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 11:58:12.509 DEBUG 24414 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:58:16.942 DEBUG 24414 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 11:58:16.943 DEBUG 24414 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:58:16.944 DEBUG 24414 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 11:58:16.945 DEBUG 24414 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 11:58:16.945 DEBUG 24414 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 11:58:17.042 DEBUG 24414 --- [http-nio-8080-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 11:58:17.052 DEBUG 24414 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 11:58:18.598 DEBUG 24414 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 11:58:18.598 DEBUG 24414 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 11:58:18.684 DEBUG 24414 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 11:58:18.684 DEBUG 24414 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /employee/getAll
+2021-04-01 11:58:18.992 DEBUG 24414 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 12:00:23.756  INFO 24414 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-01 12:00:23.763  INFO 24414 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-01 12:00:23.771  INFO 24414 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-01 12:00:23.784  INFO 24414 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-01 12:08:01.138  INFO 24923 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v2.4.3)[0;39m
+
+
+2021-04-01 12:08:01.263  INFO 24923 --- [main] e.asu.cse545.group5.SBS.SbsApplication   : Starting SbsApplication using Java 1.8.0_275 on ACP with PID 24923 (/Users/acpathak/Documents/ACPDocuments/College/ASU/Grad_School/Spring_2021/CSE_545/CSE-545-Project-SBS/target/classes started by acpathak in /Users/acpathak/Documents/ACPDocuments/College/ASU/Grad_School/Spring_2021/CSE_545/CSE-545-Project-SBS)
+2021-04-01 12:08:01.264  INFO 24923 --- [main] e.asu.cse545.group5.SBS.SbsApplication   : No active profile set, falling back to default profiles: default
+2021-04-01 12:08:02.415  INFO 24923 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-01 12:08:02.566  INFO 24923 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 8 JPA repository interfaces.
+2021-04-01 12:08:03.636  INFO 24923 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 12:08:03.669  INFO 24923 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 12:08:03.669  INFO 24923 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-01 12:08:03.780  INFO 24923 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 12:08:03.781  INFO 24923 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2448 ms
+2021-04-01 12:08:04.251  INFO 24923 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-01 12:08:04.381  INFO 24923 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-04-01 12:08:04.812  INFO 24923 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-01 12:08:05.006  INFO 24923 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-01 12:08:05.583  INFO 24923 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-01 12:08:05.616  INFO 24923 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-04-01 12:08:06.379  WARN 24923 --- [main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): edu.asu.cse545.group5.SBS.model.AppointmentKey
+2021-04-01 12:08:06.380  WARN 24923 --- [main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): edu.asu.cse545.group5.SBS.model.AppointmentKey
+2021-04-01 12:08:07.431  INFO 24923 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-01 12:08:07.445  INFO 24923 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-01 12:08:08.485  WARN 24923 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-01 12:08:09.283 DEBUG 24923 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Ant [pattern='/authenticate']
+2021-04-01 12:08:09.285 DEBUG 24923 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [authenticated] for any request
+2021-04-01 12:08:09.303  INFO 24923 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e258d3b, org.springframework.security.web.context.SecurityContextPersistenceFilter@1fa98a22, org.springframework.security.web.header.HeaderWriterFilter@4c2bea52, org.springframework.web.filter.CorsFilter@2b6fcca1, org.springframework.security.web.authentication.logout.LogoutFilter@7a62d697, edu.asu.cse545.group5.SBS.filter.JWTRequestFilter@66715ca9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a7e81, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53ba25ff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39f93225, org.springframework.security.web.session.SessionManagementFilter@40c28b0d, org.springframework.security.web.access.ExceptionTranslationFilter@3dc55719, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e6acec2]
+2021-04-01 12:08:09.536  INFO 24923 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-01 12:08:10.083  INFO 24923 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-01 12:08:10.104  INFO 24923 --- [main] e.asu.cse545.group5.SBS.SbsApplication   : Started SbsApplication in 9.621 seconds (JVM running for 10.396)
+2021-04-01 12:08:56.578  INFO 24923 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-01 12:08:56.579  INFO 24923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-01 12:08:56.582  INFO 24923 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-04-01 12:08:56.599 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 12:08:56.608 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 12:08:56.648 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 12:08:56.659 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 12:08:56.680 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 12:08:56.682 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 12:08:56.688 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 12:08:56.689 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 12:08:56.690 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 12:08:56.690 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 12:08:56.822 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 12:09:07.861 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /authenticate
+2021-04-01 12:09:07.862 DEBUG 24923 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 12:09:07.863 DEBUG 24923 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 12:09:07.866 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 12:09:07.866 DEBUG 24923 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 12:09:07.867 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 12:09:07.868 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 12:09:07.868 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 12:09:08.180 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 12:09:08.604 DEBUG 24923 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 12:09:11.298 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /employee/getAll
+2021-04-01 12:09:11.299 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 12:09:11.300 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 12:09:11.304 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 12:09:11.304 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 12:09:11.352 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 12:09:11.353 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /employee/getAll
+2021-04-01 12:09:11.584 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 12:13:31.950 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 12:13:31.955 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 12:13:31.964 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 12:13:31.972 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 12:13:31.972 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 12:13:32.102 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 12:13:32.119 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 12:23:02.188  WARN 24923 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s261ms).
+2021-04-01 12:53:28.302  WARN 24923 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m26s118ms).
+2021-04-01 13:25:50.828  WARN 24923 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m22s517ms).
+2021-04-01 13:36:45.943  WARN 24923 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m55s48ms).
+2021-04-01 13:39:46.602  WARN 24923 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m30s655ms).
+2021-04-01 14:00:17.021  WARN 24923 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m406ms).
+2021-04-01 14:00:55.072 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 14:00:55.077 DEBUG 24923 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 14:00:55.085 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 14:00:55.098 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 14:00:55.100 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 14:00:55.103 DEBUG 24923 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 14:00:55.106 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 14:00:55.107 DEBUG 24923 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 14:00:55.107 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 14:00:55.107 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 14:00:55.173 DEBUG 24923 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 14:14:24.189 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 14:14:24.195 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 14:14:24.202 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 14:14:24.212 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 14:14:24.219 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 14:14:24.220 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 14:14:24.223 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 14:14:24.223 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 14:14:24.228 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 14:14:24.229 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 14:14:24.280 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:00:44.634 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /authenticate
+2021-04-01 15:00:44.639 DEBUG 24923 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:00:44.648 DEBUG 24923 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:00:44.664 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 15:00:44.665 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:00:44.670 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:00:44.679 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 15:00:44.680 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 15:00:44.845 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 15:00:44.857 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:00:56.416 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 15:00:56.416 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:00:56.417 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:00:56.419 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 15:00:56.420 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 15:00:56.507 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 15:00:56.514 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:15:58.002 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 15:15:58.007 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:15:58.011 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:15:58.017 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 15:15:58.017 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 15:15:58.188 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 15:15:58.212 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:23:46.092 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 15:23:46.095 DEBUG 24923 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:23:46.101 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:23:46.110 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 15:23:46.110 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 15:23:46.220 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 15:23:46.232 DEBUG 24923 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:23:52.311 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /utility/getLogFile
+2021-04-01 15:23:52.312 DEBUG 24923 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:23:52.313 DEBUG 24923 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:23:52.318 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /utility/getLogFile
+2021-04-01 15:23:52.319 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:23:52.347 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /utility/getLogFile] with attributes [authenticated]
+2021-04-01 15:23:52.348 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /utility/getLogFile
+2021-04-01 15:23:52.383 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:24:11.997 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /utility/getLogFile
+2021-04-01 15:24:12.000 DEBUG 24923 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:24:12.005 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:24:12.009 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /utility/getLogFile] with attributes [authenticated]
+2021-04-01 15:24:12.026 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 15:24:12.026 DEBUG 24923 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:24:12.027 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 15:24:12.028 DEBUG 24923 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:24:12.028 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:24:12.028 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 15:24:12.035 DEBUG 24923 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:24:28.924 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /utility/getLogFile
+2021-04-01 15:24:28.925 DEBUG 24923 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:24:28.929 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:24:28.935 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /utility/getLogFile] with attributes [authenticated]
+2021-04-01 15:24:28.939 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 15:24:28.941 DEBUG 24923 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:24:28.941 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 15:24:28.942 DEBUG 24923 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:24:28.945 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:24:28.945 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 15:24:28.950 DEBUG 24923 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:24:45.946 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /utility/getLogFile
+2021-04-01 15:24:45.947 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:24:45.949 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:24:45.954 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /utility/getLogFile] with attributes [authenticated]
+2021-04-01 15:24:45.958 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 15:24:45.959 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:24:45.960 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 15:24:45.963 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:24:45.963 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:24:45.963 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 15:24:45.968 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:25:06.111 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /utility/getLogFile
+2021-04-01 15:25:06.111 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:25:06.113 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:25:06.116 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /utility/getLogFile] with attributes [authenticated]
+2021-04-01 15:25:06.117 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 15:25:06.117 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:25:06.118 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 15:25:06.119 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:25:06.121 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:25:06.122 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 15:25:06.128 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:25:24.105 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /utility/getLogFile
+2021-04-01 15:25:24.107 DEBUG 24923 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:25:24.108 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:25:24.110 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /utility/getLogFile] with attributes [authenticated]
+2021-04-01 15:25:24.111 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 15:25:24.111 DEBUG 24923 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:25:24.112 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 15:25:24.112 DEBUG 24923 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:25:24.112 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:25:24.113 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 15:25:24.118 DEBUG 24923 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:25:36.892 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /utility/getLogFile
+2021-04-01 15:25:36.894 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:25:36.895 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:25:36.897 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /utility/getLogFile] with attributes [authenticated]
+2021-04-01 15:25:36.900 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 15:25:36.902 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:25:36.907 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 15:25:36.909 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:25:36.909 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:25:36.910 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 15:25:36.915 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:25:52.310 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 15:25:52.312 DEBUG 24923 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:25:52.314 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:25:52.314 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 15:25:52.314 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 15:25:52.400 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 15:25:52.405 DEBUG 24923 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:25:55.768 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /utility/getLogFile
+2021-04-01 15:25:55.769 DEBUG 24923 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:25:55.784 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /utility/getLogFile] with attributes [authenticated]
+2021-04-01 15:25:55.784 DEBUG 24923 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /utility/getLogFile
+2021-04-01 15:25:55.808 DEBUG 24923 --- [http-nio-8080-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:26:51.216 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /utility/getLogFile
+2021-04-01 15:26:51.223 DEBUG 24923 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:26:51.233 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:26:51.240 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /utility/getLogFile] with attributes [authenticated]
+2021-04-01 15:26:51.242 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 15:26:51.243 DEBUG 24923 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:26:51.245 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 15:26:51.246 DEBUG 24923 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:26:51.272 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:26:51.274 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 15:26:51.298 DEBUG 24923 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:27:17.293 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 15:27:17.294 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:27:17.295 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 15:27:17.296 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 15:27:17.297 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 15:27:17.415 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 15:27:17.426 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 15:27:18.902 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /utility/getLogFile
+2021-04-01 15:27:18.903 DEBUG 24923 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 15:27:18.941 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /utility/getLogFile] with attributes [authenticated]
+2021-04-01 15:27:18.941 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /utility/getLogFile
+2021-04-01 15:27:18.980 DEBUG 24923 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 19:22:59.787  WARN 24923 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h20m10s966ms).
+2021-04-01 20:07:03.797 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /authenticate
+2021-04-01 20:07:03.801 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:07:03.807 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:07:03.813 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 20:07:03.814 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:07:03.817 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 20:07:03.822 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 20:07:03.822 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 20:07:03.961 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 20:07:03.975 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:26:27.592 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 20:26:27.596 DEBUG 24923 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:26:27.601 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 20:26:27.606 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 20:26:27.607 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 20:26:27.722 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 20:26:27.733 DEBUG 24923 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:28:20.963 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 20:28:20.965 DEBUG 24923 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:28:20.969 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 20:28:20.971 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 20:28:20.974 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 20:28:21.088 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 20:28:21.096 DEBUG 24923 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:30:39.784 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 20:30:39.786 DEBUG 24923 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:30:39.791 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 20:30:39.795 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 20:30:39.796 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 20:30:39.915 DEBUG 24923 --- [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 20:30:39.925 DEBUG 24923 --- [http-nio-8080-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:31:16.152 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /employee/getAll
+2021-04-01 20:31:16.153 DEBUG 24923 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:31:16.157 DEBUG 24923 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:31:16.163 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 20:31:16.164 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:31:16.205 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 20:31:16.206 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /employee/getAll
+2021-04-01 20:31:16.310 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:31:19.389 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /utility/getLogFile
+2021-04-01 20:31:19.390 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:31:19.393 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:31:19.397 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /utility/getLogFile
+2021-04-01 20:31:19.399 DEBUG 24923 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:31:19.416 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /utility/getLogFile] with attributes [authenticated]
+2021-04-01 20:31:19.416 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /utility/getLogFile
+2021-04-01 20:31:19.443 DEBUG 24923 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:32:02.085 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 20:32:02.086 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:32:02.088 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 20:32:02.090 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 20:32:02.090 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 20:32:02.186 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 20:32:02.197 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:32:27.329 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 20:32:27.330 DEBUG 24923 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:32:27.341 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 20:32:27.342 DEBUG 24923 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /employee/getAll
+2021-04-01 20:32:27.351 DEBUG 24923 --- [http-nio-8080-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:35:05.526 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 20:35:05.527 DEBUG 24923 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:35:05.528 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 20:35:05.529 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 20:35:05.529 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 20:35:05.611 DEBUG 24923 --- [http-nio-8080-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 20:35:05.615 DEBUG 24923 --- [http-nio-8080-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:35:58.415 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 20:35:58.416 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:35:58.418 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 20:35:58.420 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 20:35:58.420 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 20:35:58.503 DEBUG 24923 --- [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 20:35:58.511 DEBUG 24923 --- [http-nio-8080-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:40:51.581 DEBUG 24923 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /authenticate
+2021-04-01 20:40:51.583 DEBUG 24923 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:40:51.587 DEBUG 24923 --- [http-nio-8080-exec-3] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:40:51.591 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 20:40:51.592 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:40:51.594 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 20:40:51.603 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 20:40:51.604 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 20:40:51.713 DEBUG 24923 --- [http-nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 20:40:51.724 DEBUG 24923 --- [http-nio-8080-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:41:48.378 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /authenticate
+2021-04-01 20:41:48.379 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:41:48.380 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 20:41:48.380 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [POST /authenticate] with attributes [permitAll]
+2021-04-01 20:41:48.380 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /authenticate
+2021-04-01 20:41:48.466 DEBUG 24923 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2021-04-01 20:41:48.475 DEBUG 24923 --- [http-nio-8080-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:41:50.672 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 20:41:50.673 DEBUG 24923 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:41:50.687 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 20:41:50.687 DEBUG 24923 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /employee/getAll
+2021-04-01 20:41:50.709 DEBUG 24923 --- [http-nio-8080-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:41:52.784 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /employee/getAll
+2021-04-01 20:41:52.786 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:41:52.787 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 20:41:52.788 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [GET /employee/getAll] with attributes [authenticated]
+2021-04-01 20:41:52.789 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2021-04-01 20:41:52.789 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 20:41:52.790 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2021-04-01 20:41:52.790 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2021-04-01 20:41:52.791 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2021-04-01 20:41:52.793 DEBUG 24923 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /error
+2021-04-01 20:41:52.798 DEBUG 24923 --- [http-nio-8080-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2021-04-01 22:16:31.030  WARN 24923 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h3m353ms).
+2021-04-01 22:28:10.648  INFO 24923 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-01 22:28:10.659  INFO 24923 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-01 22:28:10.688  INFO 24923 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-01 22:28:10.699  INFO 24923 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

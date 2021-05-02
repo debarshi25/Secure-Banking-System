@@ -1,0 +1,29 @@
+.card {
+    margin: 5% 5% 0% 5%;
+    background-color: var(--primary-color);
+}
+
+h5, p {
+    color: white;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+a, a.btn.btn-primary.active {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    background-color: black;
+    border-color: black;
+}
+
+a.btn.btn-primary:hover, a.btn.btn-primary:focus, a.btn.btn-primary:active, .open>.dropdown-toggle.a.btn-primary {
+    background-color: black;
+    border-color: black;
+}

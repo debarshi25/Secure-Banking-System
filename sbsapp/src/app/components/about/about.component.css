@@ -1,0 +1,47 @@
+.container-fluid {
+    justify-content: center;
+}
+
+.jumbotron {
+    background-color: var(--primary-color);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+h2, h6, li {
+    color:white;
+}
+
+h2, h6, p{
+    text-align: center;
+}
+
+.options {
+    text-align: left;
+}
+
+.row {
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.button-row {
+    margin-top: 5%;
+    margin-bottom: 1rem;
+}
+
+a.btn.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+}
+
+a.btn.btn-primary:hover, a.btn.btn-primary:focus, a.btn.btn-primary:active, a.btn.btn-primary.active, .open>.dropdown-toggle.a.btn.btn-primary {
+    background-color: black;
+    border-color: black;
+}

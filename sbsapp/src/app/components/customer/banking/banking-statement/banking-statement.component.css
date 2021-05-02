@@ -1,0 +1,38 @@
+.container-fluid {
+    justify-content: center;
+    height: 100%;
+}
+
+.row {
+    justify-content: center;
+}
+
+.button-row {
+    margin-right: 5%;
+    margin-top: 3%;
+}
+
+.jumbotron {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.gen-date {
+    text-align: right;
+}
+
+button {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    background-color: black;
+    border-color: black;
+}

@@ -1,0 +1,101 @@
+<div class="container-fluid">
+    <div class="row button-row">
+        <a class="btn btn-primary btn-md" routerLinkActive="active" routerLink="/home/dashboard" role="button">
+            <i class="fa fa-arrow-left"></i> Back</a>
+    </div>
+    <div class="jumbotron form-jumbo">
+        <h1>Open a New Account</h1>
+        <h6>Please verify your information below and select the type of account you would like to open.</h6>
+        <h6>If you need to update your information, please navigate to your profile page to do so prior to requesting another account.</h6>
+        <i>(Fields marked with * are mandatory)</i>
+        <hr>
+        <form>
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    <label for="firstName">First Name*: </label>
+                    <input type="text" class="form-control" id="firstName" value="John" readonly required>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="middleName">Middle Name: </label>
+                    <input type="text" class="form-control" id="middleName" value="Jay" readonly>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="lastName">Last Name*: </label>
+                    <input type="text" class="form-control" id="lastName" value="Doe" readonly required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="streetAddress">Address Line 1*: </label>
+                    <input type="text" class="form-control" id="streetAddress" value="123 Main St." readonly required>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="city">City*: </label>
+                    <input type="text" class="form-control" id="city" value="New York City" readonly required>
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="state">State*: </label>
+                    <input type="text" class="form-control" id="state" value="New York" readonly required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="addressLine2">Address Line 2: </label>
+                    <input type="text" class="form-control" id="addressLine2" value="Apt. 101" readonly>
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="zip">Zip*: </label>
+                    <input type="text" class="form-control" id="zip" value="10001" readonly required>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="country">Country*: </label>
+                    <input type="text" class="form-control" id="country" value="USA" readonly required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address*: </label>
+                <input type="text" class="form-control" id="email" value="john.doe@email.com" readonly required>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="mobileNumber">Mobile Number*: </label>
+                    <input type="text" class="form-control" id="mobileNumber" value="(100)-8675-309" readonly required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="altPhone">Alternate Phone Number: </label>
+                    <input type="text" class="form-control" id="altPhone" value="(123) 456-7890" readonly>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="dob">Date of Birth*: </label>
+                    <input type="date" class="form-control" id="dob" value="01/23/1945" readonly required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="ssn">Social Security Number*: </label>
+                    <input type="text" class="form-control" id="ssn" value="*****1111" readonly required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="accountType">Type of Account*:</label>
+                <select id="accountType" name="accountType" class="form-control" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="option1">Checking</option>
+                    <option value="option2">Savings</option>
+                    <option value="option3">Credit Card</option>
+                </select>
+            </div>
+            <br>
+            <div class="row">
+                <div class="form-group col-lg d-flex">
+                    <button type="submit" class="btn btn-primary ml-auto">Submit</button>
+                </div>
+                <div></div>
+                <div class="form-group col-lg d-flex">
+                    <a class="btn btn-primary btn-md mr-auto" routerLinkActive="active" routerLink="/home/dashboard" role="button">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

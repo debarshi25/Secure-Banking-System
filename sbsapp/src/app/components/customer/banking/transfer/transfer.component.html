@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="jumbotron container-fluid">
+            <h3>Transfer Request</h3>
+            <hr>
+            <p>
+                Please fill out the form below to submit a transfer request.
+            </p>
+            <form>
+                <div class="row">
+                    <div class="col-sm">
+                        Account Number: 
+                    </div>
+                    <div class="col-sm">
+                        Account Type: 
+                    </div>
+                    <div class="col-sm">
+                        Present Balance: 
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-group col-sm">
+                        <label for="amount">Amount (in USD)*: </label>
+                        <input type="number" step="0.01" class="form-control" id="amount" required>
+                    </div>
+                    <div class="form-group col-sm">
+                        <label for="destination">Destination Account Number*: </label>
+                        <input type="text" class="form-control" id="destination" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md">
+                        <label for="description">Description*: </label>
+                        <input type="text" class="form-control" id="description" placeholder="e.g., Rent" required>
+                    </div>
+                </div>
+                <hr>
+                <div class="row d-flex">
+                    <div class="form-group col-d ml-aut">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    <div></div>
+                    <div class="form-group col-d mr-aut">
+                        <a class="btn btn-primary" routerLinkActive="active" routerLink="/account" role=button>Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

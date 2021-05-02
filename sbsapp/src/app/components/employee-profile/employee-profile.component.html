@@ -1,0 +1,213 @@
+<div class="container-fluid">
+    <div class="row button-row">
+        <div class="col-md d-flex">
+            <a class="btn btn-primary btn-md" *ngIf="authenticationService.isLoggedInTier1 | async as isLoggedInTier1" routerLinkActive="active" routerLink="/tier1" role="button">
+                <i class="fa fa-arrow-left"></i> Back
+            </a>
+            <a class="btn btn-primary btn-md" *ngIf="authenticationService.isLoggedInTier2 | async as isLoggedInTier2" routerLinkActive="active" routerLink="/tier2" role="button">
+                <i class="fa fa-arrow-left"></i> Back
+            </a>
+            <a class="btn btn-primary btn-md" *ngIf="authenticationService.isLoggedInAdmin | async as isLoggedInAdmin" routerLinkActive="active" routerLink="/admin" role="button">
+                <i class="fa fa-arrow-left"></i> Back
+            </a>
+        </div>
+        <div class="col-md d-flex">
+            <button type="button" class="btn btn-primary ml-auto" data-toggle="modal" data-target="#modifyEmpInfoModal" (click)="onModifyClick(employee)">
+                <i class="fa fa-pencil-square-o"></i> Request Modification
+            </button>
+        </div>
+    </div>
+
+    <!--Modify Employee Info Modal-->
+    <div class="modal fade" id="modifyEmpInfoModal" tabindex="-1" role="dialog" *ngIf="employeeToModify as emp">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modifyEmpInfoModalTitle">Request Modification of Personal Information</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Modify any necessary fields. Modifications will be submitted for approval.</h6>
+                    <i>(Fields marked with * are mandatory)</i>
+                    <hr>
+                    <form #modifyForm id="modifyEmployeeForm" [formGroup]="modifyEmployeeForm" (ngSubmit) = "onUpdateSubmit()">
+                        <div class="row">
+                            <div class="form-group col-lg">
+                                <label for="employeeId">Employee ID*: </label>
+                                <input type="text" class="form-control" id="employeeId" formControlName="employeeId" placeholder={{emp.employeeId}} value="{{emp.employeeId}}" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-4">
+                                <label for="firstName">First Name*: </label>
+                                <input type="text" class="form-control" id="firstName" formControlName="firstName" placeholder="{{emp.firstName}}">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="middleName">Middle Name: </label>
+                                <input type="text" class="form-control" id="middleName" formControlName="middleName" placeholder="{{emp.middleName}}">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="lastName">Last Name*: </label>
+                                <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder="{{emp.lastName}}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="streetAddress">Address Line 1*: </label>
+                                <input type="text" class="form-control" id="streetAddress" formControlName="streetAddress" placeholder="{{emp.streetAddress}}">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="city">City*: </label>
+                                <input type="text" class="form-control" id="city" formControlName="city" placeholder="{{emp.city}}">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="state">State*: </label>
+                                <input type="text" class="form-control" id="state" formControlName="state" placeholder="{{emp.state}}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="addressLine2">Address Line 2: </label>
+                                <input type="text" class="form-control" id="addressLine2" formControlName="addressLine2" placeholder="{{emp.addressLine2}}">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="zip">Zip*: </label>
+                                <input type="text" class="form-control" id="zip" formControlName="zip" placeholder="{{emp.zip}}">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="country">Country*: </label>
+                                <input type="text" class="form-control" id="country" formControlName="country" placeholder="{{emp.country}}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address*: </label>
+                            <input type="text" class="form-control" id="email" formControlName="email" placeholder="{{emp.email}}">
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="mobileNumber">Mobile Number*: </label>
+                                <input type="text" class="form-control" id="mobileNumber" formControlName="mobileNumber" placeholder="{{emp.mobileNumber}}">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="altPhone">Alternate Phone Number: </label>
+                                <input type="text" class="form-control" id="altPhone" formControlName="altPhone" placeholder="{{emp.altPhone}}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="dob">Date of Birth*: </label>
+                                <input type="date" class="form-control" id="dob" formControlName="dob" placeholder="{{emp.dob}}">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="ssn">Social Security Number*: </label>
+                                <input type="text" class="form-control" id="ssn" formControlName="ssn" placeholder="XXX-XX-XXXX">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="securityQ1">Security Question 1*:</label>
+                                <select id="securityQ1" name="securityQ1" class="form-control" formControlName="securityQ1">
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="option1">What was the house number and street name you lived in as a child?</option>
+                                    <option value="option2">What were the last four digits of your childhood telephone number?</option>
+                                    <option value="option3">What primary school did you attend?</option>
+                                    <option value="option4">In what town or city was your first full time job?</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="securityA1">Security Answer 1*: </label>
+                                <input type="text" class="form-control" id="securityA1" formControlName="securityA1" placeholder="*******">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="securityQ2">Security Question 2*:</label>
+                                <select id="securityQ2" name="securityQ2" formControlName="securityQ2" class="form-control">
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="option1">In what town or city did you meet your spouse or partner?</option>
+                                    <option value="option2">What is the middle name of your oldest child?</option>
+                                    <option value="option3">What are the last five digits of your driver's license number?</option>
+                                    <option value="option4">What is your grandmother's (on your mother's side) maiden name?</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="securityA2">Security Answer 2*: </label>
+                                <input type="text" class="form-control" id="securityA2" formControlName="securityA2" placeholder="******">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md">
+                                <label for="tier">Tier*: </label>
+                                <input class="form-control" type="text" id="tier" name="tier" formControlName="tier" placeholder="{{emp.tier}}" readonly>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" #cancel data-dismiss="modal">Cancel</button>
+                            <button form="modifyEmployeeForm" type="submit" [disabled]="!modifyEmployeeForm.valid" class="btn btn-primary" (click)="closeModal()">Submit Modification Request</button>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="jumbotron container-fluid">
+            <h3>Personal Information</h3>
+            <hr>
+            <div class="row">
+                <div class="col-md">
+                    <p>
+                        <b>Full Name:</b><br>
+                        {{employee.firstName}} {{employee.middleName}} {{employee.lastName}}
+                        <br>
+                        <br>
+                        <b>Address:</b><br>
+                        {{employee.streetAddress}}, {{employee.addressLine2}} <br>
+                        {{employee.city}}, {{employee.state}}, {{employee.country}}, {{employee.zip}} <br>
+                        <br>
+                        <b>Email:</b><br>
+                        {{employee.email}}<br>
+                        <br>
+                        <b>Phone Number:</b><br>
+                        {{employee.mobileNumber}}<br>
+                        <br>
+                        <b>Alternate Phone:</b><br>
+                        {{employee.altPhone}}<br>
+                        <br>
+                        <b>Date of Birth:</b><br>
+                        {{employee.dob | date:'longDate'}}<br>
+                        <br>
+                        <b>Tier:</b><br>
+                        {{employee.tier | uppercase}}
+                    </p>
+                </div>
+                <div class="col-md">
+                    <p> 
+                        <b>Social Security Number:</b><br>
+                        XXX-XX-XX{{employee.ssn | slice:9}}<br>
+                        <br>
+                        <b>Security Question 1:</b><br>
+                        ***********<br>
+                        <br>
+                        <b>Security Answer 1:</b><br>
+                        ***********<br>
+                        <br>
+                        <b>Security Question 2:</b><br>
+                        ***********<br>
+                        <br>
+                        <b>Security Answer 2:</b><br>
+                        ***********<br>
+                        <br>
+                        <b>Password:</b><br>
+                        ***********<br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

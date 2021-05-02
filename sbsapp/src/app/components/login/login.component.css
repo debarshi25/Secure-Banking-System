@@ -1,0 +1,73 @@
+.row {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+.jumbotron {
+    margin-top: 10%;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.jumbotron a {
+    background-color: var(--secondary-color) ;
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+.jumbotron a:hover, .jumbotron a:focus, .jumbotron a:active, .jumbotron a.active, .open>.dropdown-toggle.jumbotron a {
+    background-color: black;
+    border-color: black;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.info-jumbo {
+    max-width: 50%;
+}
+
+.form-jumbo {
+    margin-left: 10em;
+}
+
+.form-jumbo h1 {
+    font-size: 2em;
+}
+
+.form-group {
+    background-color: var(--primary-color);
+    justify-content: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.btn-primary:hover, .btn-primary:disabled, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    background-color: black;
+    border-color: black;
+}
+
+.form-control.ng-touched.ng-invalid{
+    border:2px solid var(--error-border-color);
+    background-color: var(--error-color);
+}
+
+.invalidRow {
+    justify-content: center;
+}

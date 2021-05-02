@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light head-nav">
+    <a class="navbar-brand lead" *ngIf="authenticationService.isLoggedOut | async as isLoggedOut" routerLinkActive="active" routerLink="/login">
+        <img src="../../../assets/favicon-32x32.png" width="30" height="30">
+        {{Title}}
+    </a>
+    <a class="navbar-brand lead" *ngIf="authenticationService.isLoggedInCust | async as isLoggedInCust" routerLinkActive="active" routerLink="/home">
+        <img src="../../../assets/favicon-32x32.png" width="30" height="30">
+        {{Title}}
+    </a>
+    <a class="navbar-brand lead" *ngIf="authenticationService.isLoggedInTier1 | async as isLoggedInTier1" routerLinkActive="active" routerLink="/tier1">
+        <img src="../../../assets/favicon-32x32.png" width="30" height="30">
+        {{Title}}
+    </a>
+    <a class="navbar-brand lead" *ngIf="authenticationService.isLoggedInTier2 | async as isLoggedInTier2" routerLinkActive="active" routerLink="/tier2">
+        <img src="../../../assets/favicon-32x32.png" width="30" height="30">
+        {{Title}}
+    </a>
+    <a class="navbar-brand lead" *ngIf="authenticationService.isLoggedInAdmin | async as isLoggedInAdmin" routerLinkActive="active" routerLink="/admin">
+        <img src="../../../assets/favicon-32x32.png" width="30" height="30">
+        {{Title}}
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuOptions">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuOptions">
+        <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" *ngIf="authenticationService.isLoggedInCust | async as isLoggedInCust" routerLinkActive="active" routerLink="/home"><i class="fa fa-home"></i> Home</a>
+            <a class="nav-item nav-link" *ngIf="authenticationService.isLoggedInTier1 | async as isLoggedInTier1" routerLinkActive="active" routerLink="/tier1"><i class="fa fa-home"></i> Home</a>
+            <a class="nav-item nav-link" *ngIf="authenticationService.isLoggedInTier2 | async as isLoggedInTier2" routerLinkActive="active" routerLink="/tier2"><i class="fa fa-home"></i> Home</a>
+            <a class="nav-item nav-link" *ngIf="authenticationService.isLoggedInAdmin | async as isLoggedInAdmin" routerLinkActive="active" routerLink="/admin"><i class="fa fa-home"></i> Home</a>
+            <a class="nav-item nav-link" *ngIf="authenticationService.isLoggedInCust | async as isLoggedInCust" routerLinkActive="active" routerLink="/customer-profile"><i class="fa fa-user-circle-o"></i> Profile</a>
+            <a class="nav-item nav-link" *ngIf="authenticationService.isLoggedInEmp | async as isLoggedInEmp" routerLinkActive="active" routerLink="/employee-profile"><i class="fa fa-user-circle-o"></i> Profile</a>
+            <a class="nav-item nav-link" *ngIf="authenticationService.isLoggedIn | async as isLoggedIn" (click)="onLogout()" routerLinkActive="active" routerLink="/login"><i class="fa fa-sign-out"></i> Logout</a>
+            <a class="nav-item nav-link" routerLinkActive="active" routerLink="/login"><i class="fa fa-question-circle"></i> Help</a>
+        </div>
+    </div>
+</nav>

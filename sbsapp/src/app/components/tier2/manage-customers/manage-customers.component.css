@@ -1,0 +1,51 @@
+.container-fluid {
+    justify-content: center;
+}
+
+.col-md.d-flex {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.button-row {
+    margin-top: 5%;
+    margin-bottom: 1rem;
+}
+
+.jumbotron {
+    margin-top: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 2rem;
+}
+
+button {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+}
+
+button:hover, button:focus, button:active, button.active, .open>.dropdown-toggle.button {
+    background-color: black;
+    border-color: black;
+}
+
+a.btn.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+}
+
+a.btn.btn-primary:hover, a.btn.btn-primary:focus, a.btn.btn-primary:active, a.btn.btn-primary.active, .open>.dropdown-toggle.a.btn.btn-primary {
+    background-color: black;
+    border-color: black;
+}
+
+.modDeleteButtons {
+    padding-top: .1rem;
+    padding-bottom: .05rem;
+    padding-left: .25rem;
+    padding-right: .25rem;
+}

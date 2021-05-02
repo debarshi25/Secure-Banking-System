@@ -1,0 +1,333 @@
+<div class="container-fluid">
+    <div class="row button-row">
+        <div class="col-md d-flex">
+            <a class="btn btn-primary btn-md" routerLinkActive="active" routerLink="/tier2/dashboard" role="button">
+                <i class="fa fa-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
+        <div class="col-md d-flex">
+            <button type="button" class="btn btn-primary ml-auto" data-toggle="modal" data-target="#addCustomerModal">
+                <i class="fa fa-plus"></i> Add a Customer
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addCustomerModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addCustomerModalTitle">Add a Customer</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Please fill out the following fields:</h6>
+                    <i>(Fields marked with * are mandatory)</i>
+                    <hr>
+                    <form id="addCustomerForm" [formGroup]="addCustomerForm" (ngSubmit) = "onAddSubmit()">
+                        <div class="row">
+                            <div class="form-group col-sm-4">
+                                <label for="firstName">First Name*: </label>
+                                <input type="text" class="form-control" id="firstName" formControlName="firstName" required>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="middleName">Middle Name: </label>
+                                <input type="text" class="form-control" id="middleName" formControlName="middleName">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="lastName">Last Name*: </label>
+                                <input type="text" class="form-control" id="lastName" formControlName="lastName" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="streetAddress">Address Line 1*: </label>
+                                <input type="text" class="form-control" id="streetAddress" placeholder="e.g., 123 Main Street" formControlName="streetAddress" required>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="city">City*: </label>
+                                <input type="text" class="form-control" id="city" formControlName="city" required>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="state">State*: </label>
+                                <input type="text" class="form-control" id="state" formControlName="state" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="addressLine2">Address Line 2: </label>
+                                <input type="text" class="form-control" id="addressLine2" formControlName="addressLine2" placeholder="e.g., Apt 101">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="zip">Zip*: </label>
+                                <input type="text" class="form-control" id="zip" formControlName="zip" required>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="country">Country*: </label>
+                                <input type="text" class="form-control" id="country" formControlName="country" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address*: </label>
+                            <input type="text" class="form-control" id="email" placeholder="e.g., jane.doe@email.com" formControlName="email" required>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="mobileNumber">Mobile Number*: </label>
+                                <input type="text" class="form-control" id="mobileNumber" placeholder="e.g., (123) 456-7890" formControlName="mobileNumber" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="altPhone">Alternate Phone Number: </label>
+                                <input type="text" class="form-control" id="altPhone" placeholder="e.g., (123) 456-7890" formControlName="altPhone">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="dob">Date of Birth*: </label>
+                                <input type="date" class="form-control" id="dob" placeholder="mm/dd/yyyy" formControlName="dob" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="ssn">Social Security Number*: </label>
+                                <input type="text" class="form-control" id="ssn" placeholder="XXX-XX-XXXX" formControlName="ssn" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="securityQ1">Security Question 1*:</label>
+                                <select id="securityQ1" name="securityQ1" class="form-control" formControlName="securityQ1" required>
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="option1">What was the house number and street name you lived in as a child?</option>
+                                    <option value="option2">What were the last four digits of your childhood telephone number?</option>
+                                    <option value="option3">What primary school did you attend?</option>
+                                    <option value="option4">In what town or city was your first full time job?</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="securityA1">Security Answer 1*: </label>
+                                <input type="text" class="form-control" id="securityA1" formControlName="securityA1" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="securityQ2">Security Question 2*:</label>
+                                <select id="securityQ2" name="securityQ2" formControlName="securityQ2" class="form-control" required>
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="option1">In what town or city did you meet your spouse or partner?</option>
+                                    <option value="option2">What is the middle name of your oldest child?</option>
+                                    <option value="option3">What are the last five digits of your driver's license number?</option>
+                                    <option value="option4">What is your grandmother's (on your mother's side) maiden name?</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="securityA2">Security Answer 2*: </label>
+                                <input type="text" class="form-control" id="securityA2" formControlName="securityA2" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="password">Password*: </label>
+                                <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password" required>
+                            </div>
+                           <div class="form-group col-sm-6">
+                                <label for="password2">Re-Type Password*: </label>
+                                <input type="password" class="form-control" id="password2" placeholder="Password" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" #cancel2 class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button form="addCustomerForm" type="submit" [disabled]="!addCustomerForm.valid" class="btn btn-primary" (click)="closeModal2()">Add</button>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="jumbotron transactions-jumbo container-fluid">
+            <h4>Active Customers</h4>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th style="width: 28%" scope="col">Username</th>
+                            <th style="width: 70%" scope="col">Name</th>
+                            <th style="width: 1%" scope="col">Modify</th>
+                            <th style="width: 1%" scope="col">Delete</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let customer of customers">
+                            <td>{{customer.username}}</td>
+                            <td>{{customer.firstName}}&nbsp;{{customer.lastName}}</td>
+                            <td style="text-align: center;"> 
+                                <button type="button" class="btn btn-primary modDeleteButtons" data-toggle="modal" data-target="#modifyCustomerModal" (click)="onModifyClick(customer)">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </button> 
+                            </td>
+                            <td style="text-align: center;"> 
+                                <button type="button" class="btn btn-primary modDeleteButtons" data-toggle="modal" data-target="#deleteCustomerModal" (click)="onDeleteClick(customer)">
+                                    <i class="fa fa-trash-o"></i>
+                                </button>
+                            </td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modify Customer Modal-->
+<div class="modal fade" id="modifyCustomerModal" tabindex="-1" role="dialog" *ngIf="customerToModify as cust">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modifyCustomerModalTitle">Modify Customer</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Modify the necessary fields</h6>
+                <i>(Fields marked with * are mandatory)</i>
+                <hr>
+                <form #modifyForm id="updateCustomerForm" [formGroup]="updateCustomerForm" (ngSubmit) = "onUpdateSubmit()">
+                    <div class="row">
+                        <div class="form-group col-lg">
+                            <label for="username">Username*: </label>
+                            <input type="text" class="form-control" id="username" formControlName="username" placeholder={{cust.username}} value="{{cust.username}}" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <label for="firstName">First Name*: </label>
+                            <input type="text" class="form-control" id="firstName" formControlName="firstName" placeholder="{{cust.firstName}}">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="middleName">Middle Name: </label>
+                            <input type="text" class="form-control" id="middleName" formControlName="middleName" placeholder="{{cust.middleName}}">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="lastName">Last Name*: </label>
+                            <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder="{{cust.lastName}}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="streetAddress">Address Line 1*: </label>
+                            <input type="text" class="form-control" id="streetAddress" formControlName="streetAddress" placeholder="{{cust.streetAddress}}">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="city">City*: </label>
+                            <input type="text" class="form-control" id="city" formControlName="city" placeholder="{{cust.city}}">
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <label for="state">State*: </label>
+                            <input type="text" class="form-control" id="state" formControlName="state" placeholder="{{cust.state}}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="addressLine2">Address Line 2: </label>
+                            <input type="text" class="form-control" id="addressLine2" formControlName="addressLine2" placeholder="{{cust.addressLine2}}">
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <label for="zip">Zip*: </label>
+                            <input type="text" class="form-control" id="zip" formControlName="zip" placeholder="{{cust.zip}}">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label for="country">Country*: </label>
+                            <input type="text" class="form-control" id="country" formControlName="country" placeholder="{{cust.country}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address*: </label>
+                        <input type="text" class="form-control" id="email" formControlName="email" placeholder="{{cust.email}}">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="mobileNumber">Mobile Number*: </label>
+                            <input type="text" class="form-control" id="mobileNumber" formControlName="mobileNumber" placeholder="{{cust.mobileNumber}}">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="altPhone">Alternate Phone Number: </label>
+                            <input type="text" class="form-control" id="altPhone" formControlName="altPhone" placeholder="{{cust.altPhone}}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="dob">Date of Birth*: </label>
+                            <input type="date" class="form-control" id="dob" formControlName="dob" placeholder="{{cust.dob}}">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="ssn">Social Security Number*: </label>
+                            <input type="text" class="form-control" id="ssn" formControlName="ssn" placeholder="XXX-XX-XXXX">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="securityQ1">Security Question 1*:</label>
+                            <select id="securityQ1" name="securityQ1" class="form-control" formControlName="securityQ1">
+                                <option value="" disabled selected>Select</option>
+                                <option value="option1">What was the house number and street name you lived in as a child?</option>
+                                <option value="option2">What were the last four digits of your childhood telephone number?</option>
+                                <option value="option3">What primary school did you attend?</option>
+                                <option value="option4">In what town or city was your first full time job?</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="securityA1">Security Answer 1*: </label>
+                            <input type="text" class="form-control" id="securityA1" formControlName="securityA1" placeholder="*******">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="securityQ2">Security Question 2*:</label>
+                            <select id="securityQ2" name="securityQ2" formControlName="securityQ2" class="form-control">
+                                <option value="" disabled selected>Select</option>
+                                <option value="option1">In what town or city did you meet your spouse or partner?</option>
+                                <option value="option2">What is the middle name of your oldest child?</option>
+                                <option value="option3">What are the last five digits of your driver's license number?</option>
+                                <option value="option4">What is your grandmother's (on your mother's side) maiden name?</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="securityA2">Security Answer 2*: </label>
+                            <input type="text" class="form-control" id="securityA2" formControlName="securityA2" placeholder="******">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" #cancel data-dismiss="modal">Cancel</button>
+                        <button form="updateCustomerForm" type="submit" [disabled]="!updateCustomerForm.valid" class="btn btn-primary" (click)="closeModal()">Modify</button>
+                    </div>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Delete Customer Modal-->
+<div class="modal fade" id="deleteCustomerModal" tabindex="-1" role="dialog" *ngIf="customerToDelete as cust">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteCustomerModalTitle">Delete Customer</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Are you sure you want to permanently delete {{cust.firstName}} {{cust.lastName}}?</h6>
+            </div>
+            <div class="modal-footer">
+                <button type="button" #cancel3 class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" (click)="deleteCustomer(cust.username)">Delete Customer</button>
+            </div>
+        </div>
+    </div>
+</div>

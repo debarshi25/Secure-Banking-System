@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="container">
+        <div class="jumbotron info-jumbo">
+            <h1 class="display-4">Sunrise Bank</h1>
+            <p class="lead">Broaden your banking horizons.</p>
+            <hr class="my-4">
+            <p class="lead">Don't have an account yet? Learn more about our account options and open one online today!</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-md" routerLinkActive="active" routerLink="/about" role="button">Learn More</a>
+            </p>
+            <p class="lead">
+                <a class="btn btn-primary btn-md" routerLinkActive="active" routerLink="/registration" role="button">Create Account</a>
+            </p>
+        </div>
+        <div class="jumbotron form-jumbo">
+            <h1>Welcome!</h1>
+            <br>
+            <form [formGroup]="loginForm" (ngSubmit) = "onSubmit()">
+                <div class="form-row">
+                    <label for="username">Username: </label>
+                    <input type="text" class="form-control" id="username" formControlName="id" placeholder="Username" required="true">
+                </div>
+                <br>
+                <div class="form-row">
+                    <label for="password">Password: </label>
+                    <input type="password" class="form-control" id="password" formControlName="pwd" placeholder="Password" required="true">
+                </div>
+                <br>
+                <div class="row invalidRow" *ngIf="isCredInvalid() | async as isInvalidCred">
+                    <p>Invalid Credentials. Please Try Again.</p>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
